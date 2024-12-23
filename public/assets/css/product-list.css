@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: Red Hat Text;
+
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  background-color: #fcf8f6;
+  padding: 24px;
+}
+
+.inner-container {
+  margin-inline : auto;
+  max-width: 330px;
+}
+
+.header {
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+text-align: left;
+text-decoration-skip-ink: none;
+color : #260F08;
+margin-bottom: 32px;
+
+}
+
+.desserts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.dessertItem {
+  position: relative;
+  color : black;
+  margin-bottom: 24px;
+}
+
+.dessertItem h4 {
+  margin-top: 38px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.52px;
+  color : #87635A;
+  margin-bottom: 4px;
+}
+
+.dessertItem h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  color : #260F08;
+  margin-bottom: 4px;
+}
+
+.dessertItem p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  color : #C73B0F;  
+}
+
+.dessertItem button {
+  padding: 12.5px 28px;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  top: 190px;
+  right: 85px;
+  align-items: center;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #fff;
+  max-width: 180px;
+}
+
+.cartArea {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #fff;
+}
+
+.cartArea h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.75px;
+  color : #C73B0F;
+  margin-bottom: 40px;
+}
+
+.cookieImage {
+  margin-inline : auto;
+}
+
+.cartArea p {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  text-align: center;
+  color : #87635A;
+}
+
+
+@media(width >= 768px) {
+
+  .container {
+    background-color: #fcf8f6;
+    padding: 40px;
+  }
+  
+  .inner-container {
+    margin-inline : auto;
+    max-width: 750px;
+  }
+
+  .desserts {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+  }
+
+  .dessertItem button {
+    top: 120px;
+    right: 30px;
+  }
+
+  .cartArea {
+    padding-bottom: 40px;
+  }
+}
+
+@media (width>= 1280px) {
+
+  
+  .container {
+    padding: 88px 112px;
+  }
+
+  .inner-container {
+    max-width: 1180px;
+  }
+
+  .dessertItem button {
+    top: 140px;
+    right: 50px;
+  }
+
+
+  .cartArea {
+    margin-top: 0;
+    height: 300px;
+    padding-top: 24px;
+    padding-left: 24px;
+    width: 380px;
+
+  }
+  .shopArea {
+    display: flex;
+    gap: 32px;
+  }
+}
