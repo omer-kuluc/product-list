@@ -1,6 +1,9 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
+import "./assets/css/product-list.css"
+
+
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

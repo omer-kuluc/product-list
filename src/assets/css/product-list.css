@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@300..700&display=swap');
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  font-family: Red Hat Text;
+  background-color: #fcf8f6;
+}
+
+/* 5. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  padding-block: 24px;
+  margin-inline : auto;
+  max-width: 330px;
+}
+
+.header {
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+text-align: left;
+text-decoration-skip-ink: none;
+color : #260F08;
+margin-bottom: 32px;
+
+}
+
+.desserts {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.dessertItem {
+  position: relative;
+  color : black;
+  margin-bottom: 24px;
+}
+
+.dessertItem h4 {
+  margin-top: 38px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.52px;
+  color : #87635A;
+  margin-bottom: 4px;
+}
+
+.dessertItem h5 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  color : #260F08;
+  margin-bottom: 4px;
+}
+
+.dessertItem p {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  color : #C73B0F;
+}
+
+.add-btn {
+  padding: 12.5px 28px;
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  left: 80px;
+  bottom: 82px;
+  align-items: center;
+  border-radius: 999px;
+  border-style: none;
+  background-color: #fff;
+  border: 1px solid #AD8A85;
+
+}
+
+.add-btn img, .add-btn span {
+  cursor: pointer;
+}
+
+.plus-minus {
+  padding: 12px;
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  position: absolute;
+  left: 80px;
+  bottom: 82px;
+  align-items: center;
+  border-radius: 999px;
+  border-style: none;
+  background-color: #C73B0F;
+}
+
+.plus-minus img {
+  cursor: pointer;
+}
+
+.plus-minus span {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  color: #fff;
+}
+
+.dessert-img {
+  margin-inline : auto;
+  width: 100%;
+  border : 2px solid transparent;
+}
+
+.dessert-image-selected {
+  margin-inline : auto;
+  width: 100%;
+  border : 2px solid #C73B0F;
+  border-radius: 8px;
+}
+
+.cartArea {
+  margin-top: 32px;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.cartArea h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.75px;
+  color : #C73B0F;
+  margin-bottom: 40px;
+}
+
+.cookieImage {
+  margin-inline : auto;
+}
+
+.cartArea p {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  text-align: center;
+  color : #87635A;
+}
+
+.cart-list-container {
+  padding: 24px;
+  background-color: #fff;
+  width: 384px;
+  height: 542px;
+
+}
+
+.cart-list-container .cart-header {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.75px;
+  color : #C73B0F;
+  margin-bottom: 24px;
+}
+
+.order-area-list {
+  padding: 0;
+  padding: 0;
+  max-height: 336px;
+  overflow-y: auto;
+}
+
+.order-area-list .dessert-cart {
+  border-bottom: 1px solid #F5EEEC;
+  margin-bottom: 16px;
+}
+
+.order-area-list li {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.order-area-list .dessert-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  text-align: left;
+  color : #260F08;
+  margin-bottom: 8px;
+}
+
+.dessert-cart .dessert-info {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.dessert-cart .dessert-quantity {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  color : #C73B0F;
+  margin-right: 10px;
+}
+
+.dessert-cart .dessert-info p{
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  color : #87635A;
+}
+
+.dessert-cart .dessert-info .unit-price {
+  font-weight: 400;
+}
+
+.delete-btn img {
+  margin-top: 5px;
+}
+
+.totalPriceArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalPriceArea h3 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.52px;
+  text-align: left;
+  color : #260F08;
+}
+
+.totalPriceArea .price {
+  font-size: var(--font-sizetext-preset-2);
+  font-weight: 700;
+  line-height: 31.75px;
+  text-align: left;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-dessert-cart {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-dessert-list img {
+  width: 48px;
+  height: 48px;
+  vertical-align: bottom;
+}
+
+.modal-dessert-list .perPrice {
+  margin-left: auto;
+}
+
+.modal-dessert-list .dessert-info {
+  display: flex;
+  gap: 8px;
+}
+
+.modal-dessert-list .dessert-info h5 {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  color : #C73B0F;
+}
+
+.modal-dessert-list .dessert-info p{
+  font-family: Red Hat Text;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18.52px;
+  color : #87635A;
+}
+
+.modal-dessert-list {
+  max-height: 336px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+/* Scrollbar'ın tamamı */
+.order-area-list::-webkit-scrollbar, 
+.modal-dessert-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Scrollbar arka planı */
+.order-area-list::-webkit-scrollbar-track, 
+.modal-dessert-list::-webkit-scrollbar-track {
+  background: #FCF8F6;
+  border-radius: 4px;
+}
+
+/* Scrollbar sürgüsü */
+.order-area-list::-webkit-scrollbar-thumb,
+.modal-dessert-list::-webkit-scrollbar-thumb {
+  background: #C73B0F;
+  border-radius: 4px;
+}
+
+/* Scrollbar sürgüsü üzerine gelince */
+.order-area-list::-webkit-scrollbar-thumb:hover,
+.modal-dessert-list::-webkit-scrollbar-thumb:hover {
+  background: #952c0b;
+}
+
+
+@media(width >= 768px) {
+
+  .container {
+    background-color: #fcf8f6;
+    padding: 40px;
+    margin-inline : auto;
+    max-width: 750px;
+  }
+
+  .desserts {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 24px;
+  }
+
+  .add-btn,.plus-minus {
+    left: 17px;
+   }
+
+  .cartArea {
+    padding-bottom: 40px;
+  }
+}
+
+@media (width>= 1280px) {
+
+  .container {
+    max-width: 1216px;
+  }
+
+  .add-btn, .plus-minus {
+    left: 30px;
+   }
+
+  .cartArea {
+    margin-top: 0;
+    height: 300px;
+    padding-top: 24px;
+    padding-left: 24px;
+    width: 380px;
+  }
+
+  .shopArea {
+    display: flex;
+    gap: 32px;
+  }
+}
