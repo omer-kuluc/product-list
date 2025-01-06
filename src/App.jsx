@@ -196,7 +196,7 @@ function Basket({cartList, totalPrice, deleteDessert, onOpenModal}) {
       <div className="carbon-info-box">
         <img src="/img/carbon-tree.svg" alt="Carbon Tree Image" />
         <p>
-          This is a <span>carbon-neutral</span> delivery
+          This is a <strong>carbon-neutral</strong> delivery
         </p>
       </div>
       <div className="confirm-order">
@@ -212,28 +212,31 @@ function ModalPage({ cartList, totalPrice, onCloseModal }) {
       <div className="modal-overlay">
         <div className="modal-content">
           <div className="modal-header">
-            <img src="" alt="" />
+            <img src="/public/img/chechmark-icon.svg" alt="" />
             <h2>Order Confirmed</h2>
             <p>We hope you enjoy your food!</p>
           </div>
-          <ul className="modal-dessert-list">
-            {cartList.map((item) => (
-              <li className='modal-li' key={item.name}>
-                <div className="modal-dessert-cart">
-                  <img src={item.img} alt={item.name} />
-                  <div className="dessert-info">
-                    <h5>{item.name}</h5>
-                    <p>{item.quantity}x</p>
-                    <span className="originalPrice">@{(item.price).toFixed(2)}</span>
+          <div className="inner-modal-container">
+            <ul className="modal-dessert-list">
+              {cartList.map((item) => (
+                <li className='modal-li' key={item.name}>
+                  <div className="modal-dessert-cart">
+                    <img src={item.img} alt={item.name} />
+                    <div className="dessert-info">
+                      <h5>{item.name}</h5>
+                      <div className="modal-dessert-quantity-info">
+                      <p>{item.quantity}x</p>
+                      <span className="originalPrice">@{(item.price).toFixed(2)}</span>
+                      </div>
+                    </div>
+                  <div className="perPrice">
+                    <span>${(item.price * item.quantity).toFixed(2)}</span>
                   </div>
-                <div className="perPrice">
-                  <span>${(item.price * item.quantity).toFixed(2)}</span>
-                </div>
-                </div>
-
-              </li>
+                  </div>
+                </li>
             ))}
-          </ul>
+            </ul>
+          </div>
           <div className="order-total-price">
             <h4>Order Total</h4>
             <p>${totalPrice}</p>

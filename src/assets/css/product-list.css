@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
+button {
+  cursor: pointer;
+}
+
 .container {
   padding-block: 24px;
   margin-inline : auto;
@@ -258,11 +262,13 @@ margin-bottom: 32px;
 
 .delete-btn img {
   margin-top: 5px;
+  cursor: pointer;
 }
 
 .totalPriceArea {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .totalPriceArea h3 {
@@ -303,9 +309,40 @@ margin-bottom: 32px;
   text-align: center;
 }
 
+.modal-header h2 {
+  margin-top: 24px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  color : #260F08;  
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.modal-header p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.17px;
+  text-align: left;
+  color : #87635A;
+  margin-bottom: 32px;
+}
+
+.inner-modal-container {
+  padding: 24px;
+  background-color: #FCF8F6;
+}
+
+.modal-dessert-list {
+  padding-right: 0;
+}
+
+
 .modal-dessert-cart {
   display: flex;
   gap: 10px;
+  padding-block: 16px;
+  border-bottom: 1px solid #F5EEEC;
 }
 
 .modal-dessert-list img {
@@ -316,6 +353,7 @@ margin-bottom: 32px;
 
 .modal-dessert-list .perPrice {
   margin-left: auto;
+  align-self: center;
 }
 
 .modal-dessert-list .dessert-info {
@@ -327,21 +365,51 @@ margin-bottom: 32px;
   font-size: 14px;
   font-weight: 600;
   line-height: 18.52px;
-  color : #C73B0F;
+  color : #260F08;
+  padding-left: 0;
 }
 
 .modal-dessert-list .dessert-info p{
-  font-family: Red Hat Text;
   font-size: 14px;
   font-weight: 600;
+  line-height: 18.52px;
+  color : #C73B0F;
+}
+
+.modal-dessert-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.modal-overlay .dessert-info{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-dessert-quantity-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.modal-overlay .originalPrice {
+  font-size: 14px;
+  font-weight: 400;
   line-height: 18.52px;
   color : #87635A;
 }
 
-.modal-dessert-list {
-  max-height: 336px;
-  overflow-y: auto;
-  padding: 0;
+.modal-overlay .perPrice {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  color : #260F08;
+}
+
+.order-total-price {
+  background-color: #FCF8F6;
+  padding-inline : 24px;
 }
 
 /* Scrollbar'ın tamamı */
@@ -368,6 +436,42 @@ margin-bottom: 32px;
 .order-area-list::-webkit-scrollbar-thumb:hover,
 .modal-dessert-list::-webkit-scrollbar-thumb:hover {
   background: #952c0b;
+}
+
+.modal-overlay .order-total-price  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 24px;
+}
+
+.modal-overlay .order-total-price h4 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.52px;
+  color : #260F08;
+}
+
+.modal-overlay .order-total-price p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31.75px;
+  color : #260F08;
+}
+
+.modal-overlay .newOrderBtn {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21.17px;
+  padding-block : 16px;
+  text-align: center;
+  background-color: #C73B0F;
+  color : #FFFFFF;
+  width: 100%;
+  border-style: none;
+  border-radius: 999px;
+  margin-top: 32px;
+  margin-bottom: 24px;
 }
 
 
@@ -416,5 +520,34 @@ margin-bottom: 32px;
   .shopArea {
     display: flex;
     gap: 32px;
+  }
+
+  .totalPriceArea {
+    margin-block: 24px;
+  }
+
+  .carbon-info-box {
+    background-color: #FCF8F6;
+    padding-block: 16px;
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding-left : 25px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18.52px;
+  }
+
+  .confirmBtn {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.17px;
+    padding-block : 16px;
+    text-align: center;
+    background-color: #C73B0F;
+    color : #FFFFFF;
+    width: 100%;
+    border-style: none;
+    border-radius: 999px;
   }
 }
