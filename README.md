@@ -27,10 +27,18 @@ Kullanıcılar ürünleri görüntüleyebilir, sepetlerine ekleyebilir ve toplam
 - Her ürün, başlık, fiyat ve "Add to cart" (Sepete ekle) butonu ile birlikte gösterilir.
 - Ürünler sade bir kart tasarımı ile sunulur.
 
+
+![image](https://github.com/user-attachments/assets/44dfdf9a-3f68-4412-8294-e3706a72aa11)
+
+
 ###  Sepet Sistemi
 
 - Kullanıcılar istedikleri ürünleri sepete ekleyebilir.
 - Ekleme sonrası sepet bileşeni toplam ürün sayısı ve fiyatı ile güncellenir.
+
+
+![image](https://github.com/user-attachments/assets/8032f59b-4bef-4f29-b4fa-3b174687c592)
+
 
 ###  Toplam Tutar Hesaplama
 
