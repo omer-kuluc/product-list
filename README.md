@@ -70,7 +70,7 @@ Kullanıcılar ürünleri görüntüleyebilir, sepetlerine ekleyebilir ve toplam
 ### 1. Depoyu Klonla
 
 ```bash
-git clone https://github.com/kullanici-adi/product-list-app.git
+git clone https://github.com/omer-kuluc/product-list-app.git
 ```
 
 ### 2. Dizin Değiştir
